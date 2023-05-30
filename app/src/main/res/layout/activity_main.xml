@@ -46,7 +46,9 @@
             android:ems="10"
             android:inputType="text"
             android:hint="Nombre"
-            android:text="" />
+            android:text=""
+            android:digits="qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM"
+        />
 
         <EditText
             android:id="@+id/textApellido"
@@ -55,7 +57,9 @@
             android:ems="10"
             android:inputType="text"
             android:hint="Apellido"
-            android:text="" />
+            android:text=""
+            android:digits="qwertyuiopasdfghjklñzxcvbnmQWERTYUIOPASDFGHJKLÑZXCVBNM"
+            />
 
         <EditText
             android:id="@+id/textCorreo"
