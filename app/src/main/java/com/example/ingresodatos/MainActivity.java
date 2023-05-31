@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.os.Binder;
+
+import com.example.ingresodatos.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 EditText nombre;
@@ -16,16 +19,19 @@ EditText apellido;
 EditText correo;
 EditText clave;
 Button boton;
+
+private ActivityMainBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding=ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        nombre=(EditText) findViewById(R.id.textNombre);
-        apellido=(EditText) findViewById(R.id.textApellido);
-        correo=(EditText) findViewById(R.id.textCorreo);
-        clave=(EditText) findViewById(R.id.textClave);
-        boton=(Button) findViewById(R.id.botonIngreso);
+        nombre=binding.textNombre;
+        apellido=binding.textApellido;
+        correo=binding.textCorreo;
+        clave=binding.textClave;
+        boton=binding.botonIngreso;
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
